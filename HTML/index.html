@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <link rel="icon" type="image/png" href="../IMAGES/logo-bg.png" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <!-- <link rel="stylesheet" href="../css/webslides.css" /> -->
+    <link rel="stylesheet" href="../CSS/styleMain.css" />
+    <link rel="stylesheet" href="../CSS/menuWindow.css" />
+    <link rel="stylesheet" href="../CSS/collaborate.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 620px)"
+      href="../CSS/mobile.css"
+    />
+    <link rel="stylesheet" href="../CSS/introduction.css" />
+    <link rel="stylesheet" href="../CSS/project.css" />
+    <link rel="stylesheet" href="../CSS/aboutMe.css" />
+    <link rel="stylesheet" href="../CSS/myTimeline.css" />
+    <link rel="stylesheet" href="../CSS/resume.css" />
+    <link rel="stylesheet" href="../CSS/education.css" />
+    <script
+      src="https://kit.fontawesome.com/b73f389bbf.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="../JS/introduction.js" defer></script>
+    <script src="../JS/projectInfo.js" defer></script>
+    <script src="../JS/project.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+    <script src="../JS/contact-form.js" type="module" defer></script>
+    <script src="../JS/skillSet.js" defer></script>
+    <script src="../JS/darkMode.js" defer></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js" defer></script>
+    <script src="../JS/resumeViewer.js" defer></script>
+    <script src="../JS/education.js" defer></script>
+    <title>Saniz Momin | Computer Scientiest</title>
+  </head>
+  <body class="hide-scrollbars">
+    <!-- Header -->
+    <header class="head-bar">
+      <nav>
+        <div class="head-firstHalf head-element">
+          <a
+            href="index.html"
+            class="head-1-info header-logo head-info-sizing link hover"
+            ><i class="fab fa-strava"></i
+          ></a>
+          <a
+            href=""
+            class="icon icon-resume head-1-info head-info-sizing link hover"
+            ><i class="far fa-file-alt"></i
+          ></a>
+        </div>
+        <div class="head-element redirect">
+          <i class="fas head-info-sizing redirector angle hover"></i>
+        </div>
+        <div class="head-secondHalf head-element">
+          <div class="head-2-info head-info-sizing timeline hover">
+            <i class="fas fa-history"></i>
+          </div>
+          <div
+            class="icon head-2-info menu-view header-setting head-info-sizing"
+          >
+            <i class="fas fa-cog icon-setting"></i>
+            <!-- Drop-down menu for Option -->
+            <menu class="option-menu">
+              <div class="menu-item dark-light default-color">
+                <i class="fas fa-adjust"></i>
+              </div>
+              <div class="menu-item teal"><i class="fas fa-tint"></i></div>
+              <div class="menu-item green"><i class="fas fa-tint"></i></div>
+              <div class="menu-item dark-yellow">
+                <i class="fas fa-tint"></i>
+              </div>
+            </menu>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Overlay for user-resume -->
+    <div class="user-resume hide-scrollbars overlay-container">
+      <div class="close-overlay close-user-resume">&times;</div>
+      <div class="toolbar">
+        <div class="toolbar-row-1">
+          <i class="toolbar-icon far fa-arrow-alt-circle-left prev-btn"></i>
+          <i class="toolbar-icon far fa-arrow-alt-circle-right next-btn"></i>
+        </div>
+        <span class="page-info">
+          Page <span class="page-num"></span> of
+          <span class="page-count"></span>
+        </span>
+        <div class="toolbar-row-2">
+          <i class="toolbar-icon fas fa-plus zoom-in"></i>
+          <i class="toolbar-icon fas fa-minus zoom-out"></i>
+        </div>
+      </div>
+      <canvas class="pdf-viewer"></canvas>
+
+      <div class="render-fail-msg hide-scrollbars"></div>
+      <a
+        class="resume-btn"
+        href="../RESUME/Saniz-Momin.pdf#toolbar=0"
+        target="_blank"
+        rel="noopener noreferrer"
+        >View Resume</a
+      >
+    </div>
+
+    <!-- Overlay for my-timeline -->
+    <div class="my-timeline hide-scrollbars overlay-container">
+      <div class="close-overlay close-my-timeline">&times;</div>
+      <div class="timeline-header">
+        <div class="timeline-header-content">My Timeline</div>
+      </div>
+      <!-- timeline container  -->
+      <div class="timeline-container">
+        <ul>
+          <li class="show">
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li class="show">
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-card-container">
+              <div class="time-card-header">
+                <i class="fas fa-chevron-right"></i> 2020: started coding
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae nobis corrupti et corporis non quibusdam accusantium
+                vitae dolores quidem. Necessitatibus impedit vitae doloribus
+                hic, eaque optio quibusdam rerum ipsum id.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- About window -->
+    <div class="hide-scrollbars menu-window aboutMe-container">
+      <div class="about-head whoIam">Who I am</div>
+      <div class="profile-container">
+        <div class="image-container">
+          <img src="../IMAGES/education.jpg" alt="" class="img-cover" />
+          <div class="my-name">Saniz Momin</div>
+        </div>
+        <div class="my-intro">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            facere in quia perferendis, aut neque vitae corrupti impedit tenetur
+            minima eaque. Dolores id ex vitae amet laudantium repellat iusto?
+            Cupiditate maxime voluptas veniam eius fuga, non facere, adipisci
+            voluptatem magni, provident quo. Odio iusto corporis nesciunt fugit
+            molestiae fugiat autem!
+          </p>
+        </div>
+      </div>
+      <div class="about-head myPassion">Passion</div>
+
+      <div class="passion-container">
+        <div class="passion-card">
+          <div class="passion-img"><i class="fas fa-user-astronaut"></i></div>
+          <div class="passion-header">Astronomy</div>
+          <div class="passion-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+            excepturi, dolore cumque reprehenderit a ut minima natus voluptates
+            architecto dolorum? Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Repellendus, corporis? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Debitis, doloremque.
+          </div>
+        </div>
+        <div class="passion-card">
+          <div class="passion-img"><i class="fas fa-user-astronaut"></i></div>
+          <div class="passion-header">Astronomy</div>
+          <div class="passion-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+            excepturi, dolore cumque reprehenderit a ut minima natus voluptates
+            architecto dolorum? Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Repellendus, corporis? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Debitis, doloremque.
+          </div>
+        </div>
+        <div class="passion-card">
+          <div class="passion-img"><i class="fas fa-user-astronaut"></i></div>
+          <div class="passion-header">Astronomy</div>
+          <div class="passion-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+            excepturi, dolore cumque reprehenderit a ut minima natus voluptates
+            architecto dolorum? Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Repellendus, corporis? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Debitis, doloremque.
+          </div>
+        </div>
+      </div>
+
+      <div class="about-head mySkillSet">Skill Set</div>
+
+      <div class="skillSetContainer">
+        <div class="ssCardContainer ssContainer-1">
+          <div class="ssCard ssCard-1">
+            <div class="htmlSlider"></div>
+            <div class="ssContent HTML">HTML</div>
+          </div>
+        </div>
+        <div class="ssCardContainer ssContainer-2">
+          <div class="ssCard ssCard-2">
+            <div class="cssSlider"></div>
+
+            <div class="ssContent CSS">CSS</div>
+          </div>
+          <div class="ssCard ssCard-3">
+            <div class="sassSlider"></div>
+            <div class="ssContent SASS">SASS</div>
+          </div>
+        </div>
+        <div class="ssCardContainer ssContainer-3">
+          <div class="ssCard ssCard-4">
+            <div class="cSlider"></div>
+            <div class="ssContent C">C</div>
+          </div>
+          <div class="ssCard ssCard-5">
+            <div class="javaSlider"></div>
+
+            <div class="ssContent JAVA">JAVA</div>
+          </div>
+          <div class="ssCard ssCard-6">
+            <div class="MySQLSlider"></div>
+
+            <div class="ssContent MySQL">MySQL</div>
+          </div>
+        </div>
+        <div class="ssCardContainer ssContainer-4">
+          <div class="ssCard ssCard-7">
+            <div class="reactSlider"></div>
+
+            <div class="ssContent REACT">REACT</div>
+          </div>
+          <div class="ssCard ssCard-8">
+            <div class="mernSlider"></div>
+
+            <div class="ssContent MERN">MERN</div>
+          </div>
+        </div>
+        <div class="ssCardContainer ssContainer-5">
+          <div class="ssCard ssCard-9">
+            <div class="jsSlider"></div>
+            <div class="ssContent JS">JS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Education Window -->
+    <div class="hide-scrollbars menu-window education-container">
+      <article id="webslides" class="hide-scrollbars">
+        <!-- slide 1 -->
+        <section id="section-1" class="aligncenter current edu-intro">
+          <div class="wrap aligncenter fadeInUp">
+            <h3>Education (2005-present)</h3>
+          </div>
+        </section>
+        <!-- slide 2 -->
+        <section id="section-2" class="aligncenter bg-gradient-r">
+          <span class="background dark york"></span>
+          <div class="wrap aligncenter fadeInUp">
+            <h4>York University (2020 - Present)</h4>
+            <p class="text-subtitle">Toronto Canada</p>
+          </div>
+        </section>
+        <!-- slide 3 -->
+        <section id="section-3" class="aligncenter bg-gradient-r">
+          <span class="background dark york"></span>
+          <div class="wrap bg-trans-dark aligncenter slideInRight">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem,
+            quos. Delectus, atque, eligendi sunt accusamus ullam numquam iure
+            culpa dicta architecto odit consectetur distinctio deserunt vitae
+            quis excepturi hic placeat in voluptatibus minus vero! Voluptates
+            nisi natus dolor perferendis assumenda! Error molestias sequi iusto
+            aliquam id culpa facere minus assumenda.
+          </div>
+        </section>
+        <!-- slide 4 -->
+        <section id="section-4" class="aligncenter bg-gradient-r">
+          <span class="background dark prakash"></span>
+          <div class="wrap aligncenter fadeInUp">
+            <h4>Prakash College (2017 - 2019)</h4>
+            <p class="text-subtitle">Mumbai India</p>
+          </div>
+        </section>
+        <!-- slide 5 -->
+        <section id="section-5" class="aligncenter bg-gradient-r">
+          <span class="background dark prakash"></span>
+          <div class="wrap bg-trans-dark aligncenter slideInLeft">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem,
+            quos. Delectus, atque, eligendi sunt accusamus ullam numquam iure
+            culpa dicta architecto odit consectetur distinctio deserunt vitae
+            quis excepturi hic placeat in voluptatibus minus vero! Voluptates
+            nisi natus dolor perferendis assumenda! Error molestias sequi iusto
+            aliquam id culpa facere minus assumenda.
+          </div>
+        </section>
+        <!-- slide 6 -->
+        <section id="section-6" class="aligncenter bg-gradient-r">
+          <span class="background dark rbk"></span>
+          <div class="wrap aligncenter fadeInUp">
+            <h4>RBK School (2014 - 2017)</h4>
+            <p class="text-subtitle">Mumbai India</p>
+          </div>
+        </section>
+        <!-- slide 7 -->
+        <section id="section-7" class="aligncenter bg-gradient-r">
+          <span class="background dark rbk"></span>
+          <div class="wrap bg-trans-dark aligncenter slideInRight">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem,
+            quos. Delectus, atque, eligendi sunt accusamus ullam numquam iure
+            culpa dicta architecto odit consectetur distinctio deserunt vitae
+            quis excepturi hic placeat in voluptatibus minus vero! Voluptates
+            nisi natus dolor perferendis assumenda! Error molestias sequi iusto
+            aliquam id culpa facere minus assumenda.
+          </div>
+        </section>
+        <!-- slide 8 -->
+        <section id="section-8" class="aligncenter bg-gradient-r">
+          <span class="background dark xaviers"></span>
+          <div class="wrap aligncenter fadeInUp">
+            <h4>St Xaviers School (2005 - 2014)</h4>
+            <p class="text-subtitle">Mumbai India</p>
+          </div>
+        </section>
+        <!-- slide 9 -->
+        <section id="section-9" class="aligncenter bg-gradient-r">
+          <span class="background dark xaviers"></span>
+          <div class="wrap bg-trans-dark aligncenter slideInLeft">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem,
+            quos. Delectus, atque, eligendi sunt accusamus ullam numquam iure
+            culpa dicta architecto odit consectetur distinctio deserunt vitae
+            quis excepturi hic placeat in voluptatibus minus vero! Voluptates
+            nisi natus dolor perferendis assumenda! Error molestias sequi iusto
+            aliquam id culpa facere minus assumenda.
+          </div>
+        </section>
+        <!-- section 10 -->
+        <section id="section-10" class="aligncenter current edu-intro">
+          <div class="wrap aligncenter fadeInUp hover-btn">
+            <h3 id="fa-angle-left">
+              <i class="fas fa-angle-left"></i> See My Projects?
+            </h3>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <!-- Project Window -->
+    <div class="hide-scrollbars menu-window project-container">
+      <div class="html-css project-header">html & css</div>
+      <div class="html-css-container project-items-container">
+        <!-- <div class="project-card">
+          <div class="project-image">
+            <img class="project-img" src="../IMAGES/education.jpg" alt="" />
+          </div>
+          <div class="project-title">lorem</div>
+          <div class="project-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Perferendis est commodi rem inventore illo fuga! Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit. Corporis, ipsa?
+          </div>
+          <div class="project-tags">
+            <div class="tag html-tag gradient-green">html</div>
+            <div class="tag css-tag gradient-yellow">css</div>
+          </div>
+          <div class="project-code">
+            <a class="code-link" href="#">Source Code</a>
+          </div>
+        </div> -->
+        <div class="html-css-left slider__btn slider__btn--left">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="html-css-right slider__btn slider__btn--right">
+          <i class="fas fa-angle-right"></i>
+        </div>
+        <div
+          class="html-css-project-container main-projectCard-container"
+        ></div>
+      </div>
+      <div class="html-css-js project-header">html & css & js</div>
+      <div class="html-css-js-container project-items-container">
+        <div class="html-css-js-left slider__btn slider__btn--left">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="html-css-js-right slider__btn slider__btn--right">
+          <i class="fas fa-angle-right"></i>
+        </div>
+        <div
+          class="html-css-js-project-container main-projectCard-container"
+        ></div>
+      </div>
+      <div class="java project-header">java & sql</div>
+      <div class="java-container project-items-container">
+        <div class="java-left slider__btn slider__btn--left">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="java-right slider__btn slider__btn--right">
+          <i class="fas fa-angle-right"></i>
+        </div>
+        <div class="java-project-container main-projectCard-container"></div>
+      </div>
+      <div class="qContact-container hover-btn">
+        <h3 class="qContact">
+          Want To Contact? <i class="fas fa-angle-right"></i>
+        </h3>
+      </div>
+    </div>
+
+    <!-- Collaborate Window -->
+    <div class="hide-scrollbars menu-window collaborate-container">
+      <div class="contact-container">
+        <div class="thank-container common-collaborate-container">
+          <div class="thank-content-container">
+            <!-- prettier-ignore -->
+            <span class="type thank-message" style="--n:1000;"
+              >"lorem asldfk adsfl jkas dlkjasd ;lkja ;lkjads ;lkj"</span
+            >
+          </div>
+        </div>
+        <div class="form-container common-collaborate-container">
+          <div class="form-content-container">
+            <input
+              class="form-input"
+              name="name"
+              type="text"
+              placeholder="Your name"
+            />
+            <div class="error-hint error-hidden">Your name is required.</div>
+
+            <input
+              class="form-input"
+              name="email"
+              type="email"
+              placeholder="Your email address"
+            />
+            <div class="error-hint error-hidden">
+              Your email is invalid/Required.
+            </div>
+
+            <input
+              class="form-input"
+              name="subject"
+              type="text"
+              placeholder="Your subject"
+            />
+            <div class="error-hint error-hidden">
+              Submitting with empty subject!
+            </div>
+
+            <textarea name="message" placeholder="Your message"></textarea>
+            <div class="error-hint error-hidden">
+              write something before submitting.
+            </div>
+            <a class="form-btn">Submit</a>
+          </div>
+          <div class="thank-you">
+            Thankyou for contacting, Saniz will get back to you soon!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container hide-scrollbars">
+      <div class="loader">loading</div>
+      <div class="first-sub-main main-info-sizing">
+        <div class="info-container introduction-container">
+          <div class="intro-frame-container">
+            <div class="intro-card-container">
+              <div class="infinite-intro-flip">
+                <div class="front-card">
+                  <div class="hello animate-text-1">Hello there!</div>
+                </div>
+                <div class="rear-card">
+                  <p class="intro-pad My-name animate-text-2">
+                    I am Saniz Momin
+                  </p>
+                  <p class="intro-pad Welcome animate-text-3">Welcome!</p>
+                  <p class="intro-pad portfolio animate-text-4">
+                    to my Portfolio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second-sub-main main-info-sizing">
+        <div class="info-container main-menu">
+          <div class="menu-container menu-container-1">
+            <a href="" class="menu-link menu-row-1 about" target="blank"
+              ><div class="text-wrap aboutMe-active">
+                <span class="text-title">about Me</span>
+              </div></a
+            >
+            <a href="" class="menu-link menu-row-2 projects"
+              ><div class="text-wrap project-active">
+                <span class="text-title">projects</span>
+              </div></a
+            >
+          </div>
+          <div class="menu-container menu-container-2">
+            <a href="" class="menu-link menu-row-1 education"
+              ><div class="text-wrap education-active">
+                <span class="text-title">education</span>
+              </div></a
+            >
+            <a href="" class="menu-link menu-row-2 collaborate"
+              ><div class="text-wrap collaborate-active">
+                <span class="text-title">Contact Me</span>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="made-by">Made by Saniz Momin student at York University</div>
+      <div class="social-icons">
+        <a href="" class="github social-icon pd-1 link"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="" class="instagram social-icon pd-1 link"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/sanizm?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BDfh8MqM%2FQ72izDzEdGn6iA%3D%3D"
+          class="linkedin social-icon pd-1 link"
+          target="blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="" class="twitter social-icon pd-1 link"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+  <!-- <script src="../js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script> -->
+</html>

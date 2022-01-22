@@ -1,0 +1,145 @@
+.my-timeline {
+  font-size: 1rem;
+  line-height: 1.5;
+  background: var(--color-background--2);
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* if something unusual happens try deleting this property */
+  padding-bottom: 50px;
+  color: var(--color-font-1);
+}
+
+.timeline-header {
+  background: var(--project-background);
+  padding: 4rem 0;
+}
+
+.timeline-header-content {
+  margin: 0 auto;
+  max-width: 1100px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.timeline-container ul {
+  background: var(--timelineUL-color);
+  padding: 50px 0;
+}
+/* line created */
+.timeline-container ul li {
+  list-style: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: var(--color-font-1);
+}
+
+/* div timeline card created */
+.timeline-card-container {
+  position: relative;
+  display: block;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  line-height: 1.7;
+  background: var(--project-background);
+  color: #b7c9cc;
+  border-radius: 15px;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.time-card-header {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--color-font-1);
+  font-weight: 500;
+}
+
+.timeline-container ul li:nth-child(odd) .timeline-card-container {
+  left: 40px;
+  transform: translateX(200px);
+}
+
+.timeline-container ul li:nth-child(even) .timeline-card-container {
+  left: -434px;
+  transform: translateX(-200px);
+}
+/* circles */
+.timeline-container ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  height: 25px;
+  width: 25px;
+  background: inherit;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+}
+/* arrow */
+.timeline-card-container:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* show class added through js */
+.timeline-container ul li.show .timeline-card-container {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.timeline-container ul li.show:after {
+  background: var(--project-background);
+}
+
+.timeline-container ul li:nth-child(odd) .timeline-card-container:before {
+  left: -12px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--project-background) transparent transparent;
+}
+
+.timeline-container ul li:nth-child(even) .timeline-card-container:before {
+  right: -12px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent var(--project-background);
+}
+
+@media (max-width: 900px) {
+  .timeline-card-container {
+    width: 300px;
+  }
+
+  .timeline-container ul li:nth-child(even) .timeline-card-container {
+    left: -335px;
+  }
+}
+
+@media (max-width: 700px) {
+  .timeline-container ul li {
+    margin-left: 20px;
+  }
+
+  .timeline-card-container {
+    width: calc(100vw - 90px);
+  }
+
+  .timeline-container ul li:nth-child(even) .timeline-card-container {
+    left: 40px;
+  }
+
+  .timeline-container ul li:nth-child(even) .timeline-card-container:before {
+    left: -12px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--project-background) transparent transparent;
+  }
+}

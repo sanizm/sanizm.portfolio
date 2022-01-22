@@ -1,0 +1,251 @@
+.whoIam,
+.myPassion,
+.mySkillSet {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 400;
+  padding: 0.1rem 0.5rem;
+  margin: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  background: var(--project-background);
+}
+
+/* Designing Profile */
+
+.profile-container {
+  display: flex;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.my-intro {
+  max-width: 700px;
+  align-self: center;
+  width: 100%;
+  border-left: 1px solid var(--border-color);
+  height: fit-content;
+  margin-left: 4rem;
+  margin-right: 1.5rem;
+  background: var(--project-background);
+  color: #b7c9cc;
+  padding: 1rem;
+  line-height: 30px;
+  margin-bottom: 3rem;
+  word-spacing: 2px;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.image-container {
+  display: flex;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-cover {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+  background: var(--project-background);
+  object-position: center center;
+}
+
+.my-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.passion-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 1rem;
+}
+
+.passion-card {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  color: #b7c9cc;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 350px;
+  justify-content: center;
+  padding: 0.25rem;
+  background: var(--project-background);
+}
+
+.passion-card::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background: var(--border-color);
+  top: 5px;
+  right: 5px;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.passion-card::after {
+  content: "";
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background: var(--border-color);
+  bottom: 5px;
+  left: 5px;
+  z-index: -1;
+  filter: blur(12px);
+}
+
+.passion-img {
+  font-size: 90px;
+}
+
+.passion-header {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin: 0.05rem;
+  font-size: 18px;
+}
+
+.passion-content {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.skillSetContainer {
+  margin: 1.5rem;
+}
+
+.ssCardContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ssCard {
+  width: 150px;
+  position: relative;
+  border: 1px solid transparent;
+  font-weight: 500;
+  height: 150px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--project-background);
+  font-family: "Saira Condensed", Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease-in;
+}
+
+.ssContent {
+  transform: rotate(-45deg);
+  font-size: 2.5rem;
+}
+
+.htmlSlider,
+.cssSlider,
+.sassSlider,
+.cSlider,
+.javaSlider,
+.MySQLSlider,
+.reactSlider,
+.mernSlider,
+.jsSlider {
+  z-index: -15;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in;
+  background: var(--gradient-green);
+  right: 100%;
+  transform: translateY(100%);
+}
+
+@media (max-width: 935px) {
+  .whoIam,
+  .myPassion,
+  .mySkillSet {
+    display: block;
+    text-align: center;
+  }
+  .image-container {
+    margin: auto;
+  }
+  .my-intro {
+    margin: 1rem;
+    border-right: 1px solid var(--border-color);
+  }
+}
+
+@media (max-width: 803px) {
+  .ssCard {
+    height: 120px;
+    width: 120px;
+  }
+  .ssContent {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .ssCard-4,
+  .ssCard-5,
+  .ssCard-6 {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media (max-width: 650px) {
+  .ssCard {
+    height: 100px;
+    width: 100px;
+  }
+  .ssCard-4,
+  .ssCard-5,
+  .ssCard-6 {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 587px) {
+  .ssCard {
+    height: 180px;
+    width: 180px;
+    margin: 40px 0;
+  }
+  .ssContent {
+    font-size: 2.5rem;
+  }
+  .ssCardContainer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  .whoIam,
+  .myPassion,
+  .mySkillSet {
+    font-size: 2.5rem;
+  }
+}

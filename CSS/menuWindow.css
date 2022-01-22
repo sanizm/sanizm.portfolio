@@ -1,0 +1,48 @@
+.menu-window {
+  position: absolute;
+  top: 62.8px;
+  width: 100vw;
+  height: calc(100vh - 126.25px);
+  background-image: var(--gradient-secondary);
+  /* border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--color-font-1); */
+  transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+  /* transition: transform 1s cubic-bezier(0.6, 0.04, 0.98, 0.335); */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.education-container {
+  /* z-index: 50; */
+  transform: translateX(100%);
+  overflow-y: visible;
+  /* transform: translateY(100%); */
+}
+
+.project-container {
+  transform: translateX(-100%);
+}
+
+.collaborate-container {
+  transform: translateY(100%);
+}
+
+.aboutMe-container {
+  transform: translateY(-100%);
+  background: var(--gradient-aboutMe);
+  background-size: 400%;
+  animation: bg-moment 20s infinite alternate;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-font-1);
+}
+
+@keyframes bg-moment {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* style for education window */

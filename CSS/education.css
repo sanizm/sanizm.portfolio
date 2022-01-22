@@ -1,0 +1,227 @@
+#webslides {
+  width: 100%;
+  height: 100%;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* design of section and its classes */
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edu-intro {
+  color: var(--color-font-1);
+  background: var(--edu-gradient);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* design of span for background */
+
+.bg-gradient-r {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.96) 0%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+.dark {
+  opacity: 0.2;
+}
+/* assigning background images */
+.york {
+  background: url("../IMAGES/yorku.jpg") no-repeat center center / cover;
+}
+
+.prakash {
+  background: url("../IMAGES/Prakash.jpg") no-repeat center center / cover;
+}
+.rbk {
+  background: url("../IMAGES/rbk.jpg") no-repeat center center / cover;
+}
+.xaviers {
+  background: url("../IMAGES/xavier.jpg") no-repeat center center / cover;
+}
+
+/* designing the wrapper element of the section */
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.wrap[class*="bg-"],
+.wrap.frame,
+[class*="content-"][class*="bg-"],
+[class*="content-"].frame,
+[class*="align"][class*="bg-"] {
+  padding: 1.8rem;
+}
+
+.bg-trans-dark {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.bg-trans-dark,
+[class*="bg-gradient-"] {
+  color: #fff;
+  text-shadow: 0 1px 0 #013;
+  vertical-align: middle;
+}
+
+.hover-btn {
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  max-width: fit-content;
+  text-align: center;
+  margin: 40px auto 20px auto;
+}
+.hover-btn:hover {
+  color: var(--white);
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 4rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 4rem;
+}
+
+.text-subtitle {
+  letter-spacing: 0.2rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.text-subtitle p.text-subtitle {
+  font-size: 1.6rem;
+}
+
+/* animations */
+
+.fadeInUp {
+  -webkit-animation: fadeInUp 1s;
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* for Responsiveness */
+
+@media (min-width: 1173px) {
+  h4 {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
+}
+@media (min-width: 1173px) {
+  h3 {
+    font-size: 4rem;
+    line-height: 5.6rem;
+  }
+}
+
+@media (max-width: 1172px) {
+  h4 {
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+}
+@media (max-width: 1172px) {
+  h3 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    width: 70%;
+  }
+}
+@media (max-width: 900px) {
+  h3 {
+    font-size: 2.5rem;
+    margin: 35px auto 20px auto;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    height: 70%;
+    overflow-y: auto;
+  }
+  h3 {
+    font-size: 2rem;
+    margin: 30px auto 15px auto;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 415px) {
+  h3 {
+    font-size: 1.3rem;
+    margin: 25px auto 15px auto;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  .text-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h3 {
+    font-size: 1rem;
+    margin: 20px auto 10px auto;
+  }
+  h4 {
+    font-size: 0.8rem;
+  }
+  .text-subtitle {
+    font-size: 0.5rem;
+  }
+}
