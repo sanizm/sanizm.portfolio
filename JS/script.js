@@ -33,8 +33,8 @@ const removeAngleContent = function (angleContent) {
   setTimeout(() => {
     angle.classList.remove(angleContent);
     angle.style.display = "none";
-    angleName = "";
   }, 1500);
+  angleName = "";
 };
 
 // Event delegation used

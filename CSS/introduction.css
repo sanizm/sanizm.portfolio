@@ -317,6 +317,26 @@
   }
 }
 
+@media (max-width: 415px) {
+  .intro-frame-container {
+    width: 371px;
+    height: 220px;
+    margin: 0 auto;
+    transform: skewY(0deg);
+  }
+  .front-card,
+  .rear-card {
+    width: 310px;
+    height: 145px;
+  }
+  .rear-card {
+    font-size: 1.8rem;
+  }
+  .hello {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 376px) {
   .intro-frame-container {
     width: 353px;

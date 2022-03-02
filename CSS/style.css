@@ -78,10 +78,12 @@
   --white: #fff;
   --border-color: #f3f7f7;
   --border-rgb: rgba(183, 201, 204, 1);
+  --cursor: url("../Images/cursor.png");
 }
 
 .dark-mode {
   --color-background--2: #191919;
+  --cursor: url("../IMAGES/B7C9CC.png");
   --gradient-secondary: #0a0a0a;
   --window-color: #0a0a0a;
   --project-background: #191919;
@@ -95,16 +97,19 @@
 .primary-mode {
   --border-color: var(--color-primary);
   --color-font-1: var(--color-primary);
+  --cursor: url("../IMAGES/38E5DA.png");
 }
 
 .secondary-mode {
   --border-color: var(--color-secondary);
   --color-font-1: var(--color-secondary);
+  --cursor: url("../IMAGES/6BD54D.png");
 }
 
 .tertiary-mode {
   --border-color: var(--color-tertiary);
   --color-font-1: var(--color-tertiary);
+  --cursor: url("../IMAGES/E1A551.png");
 }
 
 * {
@@ -117,6 +122,15 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--gradient-secondary);
   overflow: hidden;
+  cursor: var(--cursor), auto;
+}
+
+html,
+header,
+footer,
+input,
+a {
+  cursor: var(--cursor), auto;
 }
 
 /* Utility */
@@ -242,7 +256,6 @@ nav {
 
 .icon-setting,
 .hover {
-  cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 
@@ -265,9 +278,9 @@ nav {
   right: -0.3475rem;
   display: none;
   max-width: 45px;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
   background-color: var(--color-background--2);
-  border: 0.5px solid var(--border-color);
+  border: 1px solid var(--border-color);
   text-align: center;
   padding: 0.5rem 0.25rem;
   font-size: 1.3rem;
@@ -306,7 +319,6 @@ nav {
 }
 
 .menu-item:hover {
-  cursor: pointer;
   color: var(--white);
   border-bottom-color: var(--white);
 }
@@ -348,7 +360,6 @@ nav {
 }
 
 .close-overlay:hover {
-  cursor: pointer;
   transform: rotate(180deg);
 }
 

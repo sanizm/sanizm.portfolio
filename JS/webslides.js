@@ -3672,7 +3672,7 @@
            */
           this.isZoomed_ = false;
 
-          this.preBuildZoom_();
+          // this.preBuildZoom_();
           document.body.addEventListener("keydown", this.onKeyDown.bind(this));
         }
 
@@ -3693,7 +3693,7 @@
                   return key === event.which;
                 })
               ) {
-                this.zoomIn();
+                // this.zoomIn();
               } else if (
                 this.isZoomed_ &&
                 (__WEBPACK_IMPORTED_MODULE_1__utils_keys__[
@@ -3751,7 +3751,7 @@
                 }
               );
 
-              this.disable();
+              // this.disable();
               __WEBPACK_IMPORTED_MODULE_0__utils_dom__["a" /* default */].after(
                 this.zws_.el,
                 this.ws_.el
@@ -3811,106 +3811,106 @@
              * Toggles zoom.
              */
           },
-          {
-            key: "toggleZoom",
-            value: function toggleZoom() {
-              if (this.isZoomed_) {
-                this.zoomOut();
-              } else {
-                this.zoomIn();
-              }
-            },
+          // {
+          //   key: "toggleZoom",
+          //   value: function toggleZoom() {
+          //     if (this.isZoomed_) {
+          //       this.zoomOut();
+          //     } else {
+          //       this.zoomIn();
+          //     }
+          //   },
 
-            /**
-             * Zoom In the slider, scales the slides and uses a grid layout to show them.
-             */
-          },
-          {
-            key: "zoomIn",
-            value: function zoomIn() {
-              var _this3 = this;
+          //   /**
+          //    * Zoom In the slider, scales the slides and uses a grid layout to show them.
+          //    */
+          // },
+          // {
+          //   key: "zoomIn",
+          //   value: function zoomIn() {
+          //     var _this3 = this;
 
-              if (!this.ws_.options.showIndex) return;
-              this.enable();
-              var currentId = this.ws_.currentSlide_.el.id;
-              var zoomedCurrent = this.zws_.el.querySelector(
-                "." + CLASSES.WRAP + "." + CLASSES.CURRENT
-              );
+          //     if (!this.ws_.options.showIndex) return;
+          //     this.enable();
+          //     var currentId = this.ws_.currentSlide_.el.id;
+          //     var zoomedCurrent = this.zws_.el.querySelector(
+          //       "." + CLASSES.WRAP + "." + CLASSES.CURRENT
+          //     );
 
-              if (zoomedCurrent) {
-                zoomedCurrent.classList.remove(CLASSES.CURRENT);
-              }
+          //     if (zoomedCurrent) {
+          //       zoomedCurrent.classList.remove(CLASSES.CURRENT);
+          //     }
 
-              var actualCurrent = this.zws_.el.querySelector(
-                "#zoomed-" + currentId
-              );
-              actualCurrent.classList.add(CLASSES.CURRENT);
+          //     var actualCurrent = this.zws_.el.querySelector(
+          //       "#zoomed-" + currentId
+          //     );
+          //     actualCurrent.classList.add(CLASSES.CURRENT);
 
-              this.isZoomed_ = true;
-              document.documentElement.classList.add(CLASSES.ZOOM_ENABLED);
+          //     this.isZoomed_ = true;
+          //     document.documentElement.classList.add(CLASSES.ZOOM_ENABLED);
 
-              setTimeout(function () {
-                _this3.ws_.disable();
-                _this3.zws_.el.classList.add("in");
-                var wrapCSS = window.getComputedStyle(_this3.zws_.grid);
-                var scrollingElement = document.body;
+          //     setTimeout(function () {
+          //       _this3.ws_.disable();
+          //       _this3.zws_.el.classList.add("in");
+          //       var wrapCSS = window.getComputedStyle(_this3.zws_.grid);
+          //       var scrollingElement = document.body;
 
-                Object(
-                  __WEBPACK_IMPORTED_MODULE_2__utils_scroll_to__[
-                    "a" /* default */
-                  ]
-                )(
-                  actualCurrent.parentNode.offsetTop +
-                    __WEBPACK_IMPORTED_MODULE_0__utils_dom__[
-                      "a" /* default */
-                    ].parseSize(wrapCSS.paddingTop),
-                  50,
-                  function () {},
-                  scrollingElement
-                );
-              }, 50);
-            },
+          //       Object(
+          //         __WEBPACK_IMPORTED_MODULE_2__utils_scroll_to__[
+          //           "a" /* default */
+          //         ]
+          //       )(
+          //         actualCurrent.parentNode.offsetTop +
+          //           __WEBPACK_IMPORTED_MODULE_0__utils_dom__[
+          //             "a" /* default */
+          //           ].parseSize(wrapCSS.paddingTop),
+          //         50,
+          //         function () {},
+          //         scrollingElement
+          //       );
+          //     }, 50);
+          //   },
 
-            /**
-             * Zoom Out the slider, remove scale from the slides.
-             */
-          },
-          {
-            key: "zoomOut",
-            value: function zoomOut() {
-              var _this4 = this;
+          //   /**
+          //    * Zoom Out the slider, remove scale from the slides.
+          //    */
+          // },
+          // {
+          //   key: "zoomOut",
+          //   value: function zoomOut() {
+          //     var _this4 = this;
 
-              if (!this.ws_.options.showIndex) return;
-              this.zws_.el.classList.remove("in");
+          //     if (!this.ws_.options.showIndex) return;
+          //     this.zws_.el.classList.remove("in");
 
-              setTimeout(function () {
-                _this4.ws_.enable();
-                _this4.disable();
-                _this4.isZoomed_ = false;
-                document.documentElement.classList.remove(CLASSES.ZOOM_ENABLED);
-              }, 400);
-            },
+          //     setTimeout(function () {
+          //       _this4.ws_.enable();
+          //       _this4.disable();
+          //       _this4.isZoomed_ = false;
+          //       document.documentElement.classList.remove(CLASSES.ZOOM_ENABLED);
+          //     }, 400);
+          //   },
 
-            /**
-             * Hides the zoom container
-             */
-          },
-          {
-            key: "disable",
-            value: function disable() {
-              this.zws_.el.classList.add("disabled");
-            },
+          //   /**
+          //    * Hides the zoom container
+          //    */
+          // },
+          // {
+          //   key: "disable",
+          //   value: function disable() {
+          //     this.zws_.el.classList.add("disabled");
+          //   },
 
-            /**
-             * Shows the zoom container
-             */
-          },
-          {
-            key: "enable",
-            value: function enable() {
-              this.zws_.el.classList.remove("disabled");
-            },
-          },
+          //   /**
+          //    * Shows the zoom container
+          //    */
+          // },
+          // {
+          //   key: "disable",
+          //   value: function enable() {
+          //     this.zws_.el.classList.remove("disabled");
+          //   },
+          // },
         ]);
 
         return Zoom;

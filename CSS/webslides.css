@@ -446,6 +446,7 @@ a[rel="external"] em,
   .wrap {
     height: 70%;
     overflow-y: auto;
+    cursor: var(--cursor), auto;
   }
 }
 
@@ -1865,7 +1866,6 @@ Aligned items [class*="content-"]=== */
 a#next,
 a#previous {
   border-radius: 0.4rem;
-  cursor: pointer;
   font-size: 2.4rem;
   height: 4rem;
   padding: 0.8rem;
@@ -2364,7 +2364,6 @@ img size recommended:800x600px
 
 .overlay {
   bottom: 0;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2407,9 +2406,9 @@ li .overlay h2 {
   margin-bottom: 0;
 }
 
-li:hover .overlay {
+/* li:hover .overlay {
   cursor: pointer;
-}
+} */
 
 /*===============================================
 6.8 Plans / Pricing <ul class="flexblock plans">
@@ -3381,7 +3380,6 @@ button:disabled:hover {
     margin-right: -4.8rem;
   }
 }
-*/
 
 /*=========================================
 16. SAFARI BUGS (flex-wrap)
@@ -3505,7 +3503,6 @@ Solution: stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap
 }
 #webslides-zoomed > .wrap > .grid > .column > .wrap-zoom > .zoom-layer {
   background: transparent;
-  cursor: pointer;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -4644,7 +4641,6 @@ Slides Index
 }
 .hover-btn {
   transition: all 0.5s ease-in;
-  cursor: pointer;
   max-width: fit-content;
   text-align: center;
   margin: 40px auto 20px auto;
