@@ -1,4 +1,4 @@
-const PDFURL = "../RESUME/Saniz-Momin.pdf";
+const PDFURL = "../RESUME/Saniz_Resume.pdf";
 const canvas = document.querySelector(`.pdf-viewer`);
 const toolbar = document.querySelector(`.toolbar`);
 const resumeBtn = document.querySelector(`.resume-btn`);

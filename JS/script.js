@@ -16,7 +16,8 @@ const myTimelineOverlay = document.querySelector(".my-timeline");
 
 let alreadyOccured = false,
   angleName,
-  messageOccured = false;
+  messageOccured = false,
+  isActive = false;
 
 const setDocumentTitle = function (title) {
   document.title = title;
@@ -97,49 +98,52 @@ const mainMenu = document.querySelector(".main-menu");
 // Bring menu window into focus
 mainMenu.addEventListener("click", function (e) {
   e.preventDefault();
-  if (e.target.closest(".education-active")) {
-    setDocumentTitle("Saniz Momin | Education");
-    MainContainer.style.transform = `translateX(-100%)`;
-    educationContainer.style.transform = `translateX(0)`;
+  if (!isActive) {
+    if (e.target.closest(".education-active")) {
+      setDocumentTitle("Saniz Momin | Education");
+      MainContainer.style.transform = `translateX(-100%)`;
+      educationContainer.style.transform = `translateX(0)`;
 
-    angleName = "fa-angle-right";
-    addAngleContent(angleName);
-  } else if (e.target.closest(".project-active")) {
-    setDocumentTitle("Saniz Momin | Projects");
-    MainContainer.style.transform = `translateX(100%)`;
-    projectContainer.style.transform = `translateX(0)`;
+      angleName = "fa-angle-right";
+      addAngleContent(angleName);
+    } else if (e.target.closest(".project-active")) {
+      setDocumentTitle("Saniz Momin | Projects");
+      MainContainer.style.transform = `translateX(100%)`;
+      projectContainer.style.transform = `translateX(0)`;
 
-    if (!alreadyOccured) {
-      setTimeout(() => {
-        init();
-      }, 1000);
-      alreadyOccured = true;
+      if (!alreadyOccured) {
+        setTimeout(() => {
+          init();
+        }, 1000);
+        alreadyOccured = true;
+      }
+      angleName = "fa-angle-left";
+      addAngleContent(angleName);
+    } else if (e.target.closest(".aboutMe-active")) {
+      setDocumentTitle("Saniz Momin | AboutMe");
+      MainContainer.style.transform = `translateY(100%)`;
+      aboutMeContainer.style.transform = `translateY(0)`;
+      angleName = "fa-angle-up";
+      addAngleContent(angleName);
+    } else if (e.target.closest(".collaborate-active")) {
+      setDocumentTitle("Saniz Momin | Contact Me");
+      MainContainer.style.transform = `translateY(-100%)`;
+      collaborateContainer.style.transform = `translateY(0)`;
+      if (!messageOccured) {
+        setTimeout(() => {
+          thankYouMessage.style.display = "inline";
+        }, 1500);
+        thankYouMessage.classList.add("animate");
+      }
+      messageOccured = true;
+      angleName = "fa-angle-down";
+      addAngleContent(angleName);
     }
-    angleName = "fa-angle-left";
-    addAngleContent(angleName);
-  } else if (e.target.closest(".aboutMe-active")) {
-    setDocumentTitle("Saniz Momin | AboutMe");
-    MainContainer.style.transform = `translateY(100%)`;
-    aboutMeContainer.style.transform = `translateY(0)`;
-    angleName = "fa-angle-up";
-    addAngleContent(angleName);
-  } else if (e.target.closest(".collaborate-active")) {
-    setDocumentTitle("Saniz Momin | Contact Me");
-    MainContainer.style.transform = `translateY(-100%)`;
-    collaborateContainer.style.transform = `translateY(0)`;
-    if (!messageOccured) {
-      setTimeout(() => {
-        thankYouMessage.style.display = "inline";
-      }, 1500);
-      thankYouMessage.classList.add("animate");
-    }
-    messageOccured = true;
-    angleName = "fa-angle-down";
-    addAngleContent(angleName);
   }
 });
 
 EduToProject.addEventListener("click", () => {
+  isActive = true;
   MainContainer.style.transform = `translateX(0%)`;
   educationContainer.style.transform = `translateX(100%)`;
   setDocumentTitle("Saniz Momin | Computer Scientiest");
@@ -157,9 +161,14 @@ EduToProject.addEventListener("click", () => {
     angleName = "fa-angle-left";
     addAngleContent(angleName);
   }, 1500);
+
+  setTimeout(() => {
+    isActive = false;
+  }, 2000);
 });
 
 ProToContact.addEventListener("click", () => {
+  isActive = true;
   MainContainer.style.transform = `translateX(0%)`;
   projectContainer.style.transform = `translateX(-100%)`;
   setDocumentTitle("Saniz Momin | Computer Scientiest");
@@ -178,6 +187,9 @@ ProToContact.addEventListener("click", () => {
     angleName = "fa-angle-down";
     addAngleContent(angleName);
   }, 1500);
+  setTimeout(() => {
+    isActive = false;
+  }, 2000);
 });
 
 const isInViewport = (el) => {

@@ -128,6 +128,7 @@ textarea {
   height: 160px;
   width: 90%;
   font-family: "Poppins", sans-serif;
+  resize: none;
   margin-bottom: 0;
 }
 
