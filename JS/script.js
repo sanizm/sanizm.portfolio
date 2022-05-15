@@ -14,8 +14,7 @@ const ProToContact = document.querySelector(".qContact");
 const timelineListItems = document.querySelectorAll(".timeline-container li");
 const myTimelineOverlay = document.querySelector(".my-timeline");
 
-let alreadyOccured = false,
-  angleName,
+let angleName,
   messageOccured = false,
   isActive = false;
 
@@ -111,12 +110,6 @@ mainMenu.addEventListener("click", function (e) {
       MainContainer.style.transform = `translateX(100%)`;
       projectContainer.style.transform = `translateX(0)`;
 
-      if (!alreadyOccured) {
-        setTimeout(() => {
-          init();
-        }, 1000);
-        alreadyOccured = true;
-      }
       angleName = "fa-angle-left";
       addAngleContent(angleName);
     } else if (e.target.closest(".aboutMe-active")) {
@@ -152,12 +145,7 @@ EduToProject.addEventListener("click", () => {
     setDocumentTitle("Saniz Momin | Projects");
     MainContainer.style.transform = `translateX(100%)`;
     projectContainer.style.transform = `translateX(0)`;
-    if (!alreadyOccured) {
-      setTimeout(() => {
-        init();
-      }, 1000);
-      alreadyOccured = true;
-    }
+
     angleName = "fa-angle-left";
     addAngleContent(angleName);
   }, 1500);
