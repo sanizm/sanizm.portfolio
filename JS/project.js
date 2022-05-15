@@ -15,6 +15,8 @@ let projectItemsContainerWidth,
   projectCardWidth,
   totalProjectCards;
 
+init();
+
 function init() {
   changeProjectCardWidth();
   // prettier-ignore
