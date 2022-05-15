@@ -1,31 +1,26 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
 import {
-  getStorage,
+  getDatabase,
   ref,
-  uploadString,
-} from "https://www.gstatic.com/firebasejs/9.6.3/firebase-storage.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+  push,
+  child,
+  update,
+} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAD4C2EMBQ3Qz775YB-xjkqTUpRMCO86L4",
-  authDomain: "portfolio-contact-form-2a259.firebaseapp.com",
-  projectId: "portfolio-contact-form-2a259",
-  storageBucket: "portfolio-contact-form-2a259.appspot.com",
-  messagingSenderId: "871952766098",
-  appId: "1:871952766098:web:d1093af3b03c06f204824b",
-  measurementId: "G-SLX0P2PS9W",
+  apiKey: "AIzaSyDrzYYaDaVdyVmSfspnpkGZR6_1w25fHMk",
+  authDomain: "contact-form-d8a15.firebaseapp.com",
+  databaseURL: "https://contact-form-d8a15-default-rtdb.firebaseio.com",
+  projectId: "contact-form-d8a15",
+  storageBucket: "contact-form-d8a15.appspot.com",
+  messagingSenderId: "1050458217858",
+  appId: "1:1050458217858:web:fa4409fea521278975039b",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const storage = getStorage(app);
-const messageRef = ref(storage, "Unread message");
-const analytics = getAnalytics(app);
+const database = getDatabase(app);
 
 const form = document.querySelector(`.form-content-container`);
 const nameInput = document.querySelector(`input[name="name"]`);
@@ -95,7 +90,7 @@ const validateSubject = () => {
 
 const submit = () => {
   if (isNameValid && isMessageValid && isEmailValid) {
-    form.style.display = "none";
+    form.style.opacity = "0";
     thankyou.style.zIndex = "1";
     thankyou.style.opacity = "1";
 
@@ -104,28 +99,27 @@ const submit = () => {
       thankyou.style.zIndex = "-1";
     }, 2000);
     setTimeout(() => {
-      form.style.display = "block";
+      form.style.opacity = "1";
     }, 3500);
 
     const contactInfo = {
-      recipientName: nameInput.value,
-      recipientEmail: emailInput.value,
-      recipientSubject: subjectInput.value,
-      recipientMessage: messageInput.value,
+      recipient1Name: nameInput.value,
+      recipient2Email: emailInput.value,
+      recipient3Subject: subjectInput.value,
+      recipient4Message: messageInput.value,
     };
 
-    const contactInfoInJSON = JSON.stringify(contactInfo);
+    const Key = push(child(ref(database), "messages")).key;
+    const updates = {};
+    updates["messages/" + Key] = contactInfo;
+    update(ref(database), updates);
 
-    uploadString(messageRef, contactInfoInJSON)
-      .then(() => console.log("message sending succesfull"))
-      .catch((err) =>
-        console.error(`message sending unsucessful becasue ${err.message}`)
-      );
-
-    nameInput.value = "";
-    emailInput.value = "";
-    subjectInput.value = "";
-    messageInput.value = "";
+    setTimeout(() => {
+      nameInput.value = "";
+      emailInput.value = "";
+      subjectInput.value = "";
+      messageInput.value = "";
+    }, 1000);
   }
 
   isNameValid = false;
