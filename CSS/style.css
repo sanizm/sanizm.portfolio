@@ -78,7 +78,7 @@
   --white: #fff;
   --border-color: #f3f7f7;
   --border-rgb: rgba(183, 201, 204, 1);
-  --cursor: url("../Images/cursor.png");
+  --cursor: url("../IMAGES/cursor.png");
 }
 
 .dark-mode {
