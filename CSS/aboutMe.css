@@ -234,6 +234,13 @@
 }
 
 @media (max-width: 587px) {
+  .mySkillSet {
+    display: none;
+  }
+  .skillSetContainer {
+    display: none;
+  }
+
   .ssCard {
     height: 180px;
     width: 180px;
