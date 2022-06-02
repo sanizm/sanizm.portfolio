@@ -79,12 +79,15 @@
   position: relative;
   border-radius: 20px;
   color: #b7c9cc;
+
   flex-direction: column;
   align-items: center;
   margin-bottom: 1.5rem;
   width: 350px;
+  height: 450px;
   justify-content: center;
   padding: 0.25rem;
+  padding-bottom: 1rem;
   background: var(--project-background);
 }
 
@@ -126,6 +129,7 @@
 
 .passion-content {
   font-size: 1rem;
+  overflow: auto;
   padding: 1rem;
 }
 
